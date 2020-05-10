@@ -1,25 +1,24 @@
 {
     "perl" : "6.d",
-    "name" : "Physics::Measure",
+    "name" : "Physics::Constants",
     "auth" : "github:p6steve",
     "api" : "1",
     "version" : "0.0.3",
-    "description" : "Some support for physical units.",
+    "description" : "Some support for physical constants.",
     "authors" : [ "p6steve" ],
     "license" : "Artistic-2.0",
     "provides" : {
-        "Physics::Measure" : "lib/Physics/Measure.rakumod",
-        "Physics::Unit" : "lib/Physics/Unit.rakumod",
-        "Physics::UnitPostfix" : "lib/Physics/UnitPostfix.rakumod"
+        "Physics::Constants" : "lib/Physics/Constants.rakumod",
+        "Physics::MathConstantsWrapper" : "lib/Physics/MathConstantsWrapper.rakumod"
     },
     "depends" : [
-        "SVG","SVG::Plot","Math::Polygons"
+        "Math::Constants"
      ],
     "build-depends" : [ ],
     "test-depends" : [ ],
     "resources" : [ ],
     "tags": [
-      "Physics", "Measure", "Units"
+      "Physics", "Measure", "Units", "Constants"
     ],
-    "source-url" : "git://github.com/p6steve/raku-Physics-Measure.git"
+    "source-url" : "git://github.com/p6steve/raku-Physics-Constants.git"
 }
