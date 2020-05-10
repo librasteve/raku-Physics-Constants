@@ -12,7 +12,8 @@
         "Physics::MathConstantsWrapper" : "lib/Physics/MathConstantsWrapper.rakumod"
     },
     "depends" : [
-        "Math::Constants"
+        "Math::Constants",
+        "Physics::Measure"
      ],
     "build-depends" : [ ],
     "test-depends" : [ ],
