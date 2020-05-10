@@ -1,5 +1,6 @@
+
+```perl6
 #!/usr/bin/env raku 
-use lib '../lib';
 
 use Physics::Constants;  #<== must use before Physics::Measure 
 use Physics::Measure;
@@ -26,4 +27,5 @@ say "Energy of photon (Ep) is " ~Ep.in('attojoules');
 #say @physics-constants-names.sort;
 #say '----------------';
 #say @physics-constants-abbreviations.sort;
+```
 
