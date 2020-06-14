@@ -24,6 +24,8 @@ say "Energy of photon (Ep) is " ~Ep.in('attojoules');
 #Frequency of photon (ν) is 119.9169832 petahertz
 #Energy of photon (Ep) is 79.45783266707788 attojoules
 
+This module is a wrapper on JJ Merelo Math::Constants
+https://github.com/JJ/p6-math-constants
 #say '----------------';
 #say @physics-constants;
 #say '----------------';
