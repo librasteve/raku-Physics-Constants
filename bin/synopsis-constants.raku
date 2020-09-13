@@ -22,10 +22,9 @@ say "Energy of photon (Ep) is " ~Ep.in('attojoules');
 #Frequency of photon (ν) is 119.9169832 petahertz
 #Energy of photon (Ep) is 79.45783266707788 attojoules
 
-#say '----------------';
-#say @physics-constants;
-#say '----------------';
-#say @physics-constants-names.sort;
-#say '----------------';
-#say @physics-constants-abbreviations.sort;
+#die;
+say '----------------';
+say @physics-constants.sort.join("\n");
+say '----------------';
+say @physics-constants-abbreviations.sort.join("\n");
 
