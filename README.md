@@ -5,6 +5,7 @@ use Physics::Constants;  #<== must use before Physics::Measure
 use Physics::Measure;
 use Physics::UnitPostfix;
 
+say ~kg-amu;                        #6.02214076e+23 mol^-1  (avogadro number = Na)
 say ~plancks-h;                     #6.626070015e-34 J.s
 say ~faraday-constant;              #96485.33212 C/mol
 say ~fine-structure-constant;       #0.0072973525693   (dimensionless)
