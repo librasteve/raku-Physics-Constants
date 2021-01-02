@@ -1,7 +1,6 @@
-unit module Physics::Constants:ver<0.0.3>:auth<Steve Roe (p6steve@furnival.net)>;
+unit module Physics::Constants:ver<1.0.0>:auth<Steve Roe (p6steve@furnival.net)>;
 #this module transforms unit class Math::Constants:ver<0.1.1>:auth<github:JJ>;
 use Physics::MathConstantsWrapper;
-use Physics::Measure;
 
 # Updated physical constants from https://nist.gov/cuu/Constants -- CODATA 2018 recommendations
 # These values led to the redefinition of the kilogram and ampere in SI on 2019-05-20
