@@ -2,8 +2,7 @@
 ```perl6
 #!/usr/bin/env raku 
 use Physics::Constants;  #<== must use before Physics::Measure 
-use Physics::Measure;
-use Physics::UnitPostfix;
+use Physics::Measure :ALL;
 
 say ~kg-amu;                        #6.02214076e+23 mol^-1  (avogadro number = Na)
 say ~plancks-h;                     #6.626070015e-34 J.s
