@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/p6steve/raku-Physics-Constants.svg?branch=master)](https://travis-ci.com/p6steve/raku-Physics-Constants)
+#SYNOPSIS
 
 ```perl6
 #!/usr/bin/env raku 
