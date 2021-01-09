@@ -1,4 +1,5 @@
 #!/usr/bin/env raku 
+use lib '../lib';
 use Physics::Constants;  #<== must use before Physics::Measure 
 use Physics::Measure :ALL;
 
