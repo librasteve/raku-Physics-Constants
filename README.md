@@ -4,7 +4,7 @@ Bridging physical constants into [Physics::Measure](https://github.com/p6steve/r
 
 # SYNOPSIS
 
-```perl6
+```raku
 #!/usr/bin/env raku
 use Physics::Constants;  #<== must use before Physics::Measure
 use Physics::Measure :ALL;
@@ -16,13 +16,13 @@ say ~fine-structure-constant;       #0.0072973525693   (dimensionless)
 say ~μ0;                            #1.25663706212e-06 H/m
 say ~ℏ;                             #1.054571817e-34 J.s
 
-my \λ = 2.5nm; 
+my \λ = 2.5nm;
 say "Wavelength of photon (λ) is " ~λ;
 
-my \ν = c / λ; 
+my \ν = c / λ;
 say "Frequency of photon (ν) is " ~ν.in('petahertz');
 
-my \Ep = ℎ * ν; 
+my \Ep = ℎ * ν;
 say "Energy of photon (Ep) is " ~Ep.in('attojoules');
 
 #Wavelength of photon (λ) is 2.5 nm
