@@ -2,11 +2,11 @@
 
 Bridging physical constants into [Physics::Measure](https://github.com/p6steve/raku-Physics-Measure) objects
 
-#SYNOPSIS
+# SYNOPSIS
 
 ```perl6
-#!/usr/bin/env raku 
-use Physics::Constants;  #<== must use before Physics::Measure 
+#!/usr/bin/env raku
+use Physics::Constants;  #<== must use before Physics::Measure
 use Physics::Measure :ALL;
 
 say ~kg-amu;                        #6.02214076e+23 mol^-1  (avogadro number = Na)
