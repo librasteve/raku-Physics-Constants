@@ -3,7 +3,7 @@
 #TESTALL$ prove6 ./t      [from root]
 use lib '../lib';
 use Test;
-plan 9;
+plan 10;
 
 use Physics::Constants;  #<== must use before Physics::Measure 
 use Physics::Measure :ALL;
@@ -19,14 +19,12 @@ is ~ν.norm, '119.92 petahertz',						'~ν.norm';
 my \Ep = ℎ * ν;  
 is ~Ep.norm, '79.46 attojoule',						'~Ep.norm';
 
-
-$Physics::Measure::round-to = Nil;
-
-is ~plancks-h,                 '6.62607015e-34 J.s',        'plancks-h'; 
-is ~faraday-constant,          '96485.33212331001 C/mol',   'faraday-constant';
-is ~fine-structure-constant,   '0.0072973525693',           'fine-structure-constant'; 
-is ~μ0,                        '1.25663706212e-06 H/m',     '~μ0';
-is ~ℏ,                         '1.0545718176461565e-34 J.s','~ℏ'; 
-is ~c,		                   '299792458 m/s',             '~c'; 
+is-approx +kg-amu,                  6.02214076e+23,             '≈kg-amu';
+is-approx +plancks-h,               6.62607015e-34,             '≈plancks-h'; 
+is-approx +faraday-constant,        96485.33212331001,          '≈faraday-constant';
+is-approx +fine-structure-constant, 0.0072973525693,            '≈fine-structure-constant'; 
+is-approx +μ0,                      1.25663706212e-06,          '≈μ0';
+is-approx +ℏ,                       1.0545718176461565e-34,     '≈ℏ'; 
+is-approx +c,                       299792458,                  '≈c'; 
 
 #done-testing;
