@@ -3,19 +3,19 @@ use lib '../lib';
 use Physics::Constants;  #<== must use before Physics::Measure 
 use Physics::Measure :ALL;
 
-$Physics::Measure::round-to = 0.01;
+$Physics::Measure::round-val = 0.01;
 
 my \λ = 2.5nm; 
 my \ν = c / λ; 
 my \Ep = ℎ * ν; 
 
-say "Wavelength of photon (λ) is " ~λ;				#2.5 nm
-say "Frequency of photon (ν) is " ~ν.norm;			#119.92 petahertz 
-say "Energy of photon (Ep) is " ~Ep.norm;			#79.46 attojoule
+say "Wavelength of photon (λ) is " ~λ;				#2.5nm
+say "Frequency of photon (ν) is " ~ν.norm;			#119.92PHz
+say "Energy of photon (Ep) is " ~Ep.norm;			#79.46aJ
 
 $Physics::Measure::round-to = Nil;
 
-say ~kg-amu;					#6.02214076e+23 mol^-1  (avogadro number = Na)
+say ~kg-amu;		       #6.02214076e+23 mol^-1  (avogadro number = Na)
 say ~plancks-h;                 #6.626070015e-34 J.s
 say ~faraday-constant;          #96485.33212 C/mol
 say ~fine-structure-constant;   #0.0072973525693   (dimensionless)

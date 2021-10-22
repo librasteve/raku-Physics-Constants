@@ -8,16 +8,16 @@ plan 10;
 use Physics::Constants;  #<== must use before Physics::Measure 
 use Physics::Measure :ALL;
 
-$Physics::Measure::round-to = 0.01;
+$Physics::Measure::round-val = 0.01;
 
 my \λ = 2.5nm; 
-is ~λ, '2.5 nm',									'~λ';
+is ~λ, '2.5nm',									'~λ';
 
 my \ν = c / λ;  
-is ~ν.norm, '119.92 petahertz',						'~ν.norm';
+is ~ν.norm, '119.92PHz',						'~ν.norm';
 
 my \Ep = ℎ * ν;  
-is ~Ep.norm, '79.46 attojoule',						'~Ep.norm';
+is ~Ep.norm, '79.46aJ',						    '~Ep.norm';
 
 is-approx +kg-amu,                  6.02214076e+23,             '≈kg-amu';
 is-approx +plancks-h,               6.62607015e-34,             '≈plancks-h'; 
