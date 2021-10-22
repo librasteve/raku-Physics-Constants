@@ -9,7 +9,7 @@ Bridging physical constants into [Physics::Measure](https://github.com/p6steve/r
 use Physics::Constants;  #<== must use before Physics::Measure
 use Physics::Measure :ALL;
 
-say ~kg-amu;                        #6.02214076e+23 mol^-1  (avogadro number = Na)
+say ~kg-amu;                        #6.02214076e+26 mol^-1  (avogadro number = Na)
 say ~plancks-h;                     #6.626070015e-34 J.s
 say ~faraday-constant;              #96485.33212 C/mol
 say ~fine-structure-constant;       #0.0072973525693   (dimensionless)
