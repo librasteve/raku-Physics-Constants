@@ -19,7 +19,7 @@ is ~ν.norm, '119.92PHz',						'~ν.norm';
 my \Ep = ℎ * ν;  
 is ~Ep.norm, '79.46aJ',						    '~Ep.norm';
 
-is-approx +kg-amu,                  6.02214076e+23,             '≈kg-amu';
+is-approx +kg-amu,                  6.02214076e+26,             '≈kg-amu';
 is-approx +plancks-h,               6.62607015e-34,             '≈plancks-h'; 
 is-approx +faraday-constant,        96485.33212331001,          '≈faraday-constant';
 is-approx +fine-structure-constant, 0.0072973525693,            '≈fine-structure-constant'; 
