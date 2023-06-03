@@ -1,4 +1,5 @@
-[![Build Status](https://app.travis-ci.com/librasteve/raku-Physics-Constants.svg?branch=master)](https://app.travis-ci.com/librasteve/raku-Physics-Constants)
+[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic%202.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)
+[![raku-physics-constants -> DH](https://github.com/librasteve/raku-Physics-Constants/actions/workflows/constants-weekly.yaml/badge.svg)](https://github.com/librasteve/raku-Physics-Constants/actions/workflows/constants-weekly.yaml)
 
 Bridging physical constants into [Physics::Measure](https://github.com/librasteve/raku-Physics-Measure) objects
 
@@ -39,3 +40,4 @@ https://github.com/JJ/p6-math-constants
 #say @physics-constants-abbreviations.sort;
 ```
 
+Copyright (c) Henley Cloud Consulting Ltd. 2021-2023
