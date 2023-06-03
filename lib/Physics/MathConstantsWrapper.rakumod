@@ -1,4 +1,4 @@
-unit module Physics::MathConstantsWrapper:ver<1.0.1>:auth<Steve Roe (p6steve@furnival.net)>;
+unit module Physics::MathConstantsWrapper:ver<1.0.1>:auth<Steve Roe (librasteve@furnival.net)>;
 #this module wraps unit class Math::Constants:ver<0.1.1>:auth<github:JJ>;
 
 use Math::Constants;
