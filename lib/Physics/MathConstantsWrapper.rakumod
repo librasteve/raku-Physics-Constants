@@ -1,10 +1,10 @@
-unit module Physics::MathConstantsWrapper:ver<1.0.1>:auth<Steve Roe (librasteve@furnival.net)>;
+unit module Physics::MathConstantsWrapper:ver<1.0.4>:auth<Steve Roe (librasteve@furnival.net)>;
 #this module wraps unit class Math::Constants:ver<0.1.1>:auth<github:JJ>;
 
 use Math::Constants;
 
 #`[[ 
-###Here are examples of definition & export in Math::Constants...
+###Here are examples of defn & export in Math::Constants...
 
 # Physical Constants
 my constant plancks-h         is export = 6.626_070_015e-34;   # exact
@@ -18,17 +18,17 @@ my constant phi               is export = 1.61803398874989e0;
 my constant ℎ is export := plancks-h;
 ...
 
-###This Phsyics::Mathconstantswrapper has several functions:
+###This Physics::MathConstantsWrapper has several functions:
 #1 Hide/suppress Math::Constant exports
 #2 Select & list Physical Constant subset
-#3 Map on to suitable unit definitions
+#3 Map on to suitable unit defns
 #4 Transform to class Constant data structures
-#5 Export programmatically for use by Phsics::Constants
+#5 Export programmatically for use by Physics::Constants
 #]]
 
 # REF: http://www.ebyte.it/library/educards/constants/ConstantsOfPhysicsAndMath.html
 
-my %definitions-by-name = (
+my %defns-by-name = (
 	plancks-h						=> 'J.s',
 	plancks-reduced-h				=> 'J.s',
 	speed-of-light-vacuum			=> 'm/s',
@@ -45,22 +45,22 @@ my %definitions-by-name = (
 	planck-time						=> 's',
 	planck-length					=> 'm',
 	planck-temperature				=> 'K',	
-	kg-amu							=> 'mol^-1', #avogadro number
+	kg-amu							=> 'mol^-1',	#avogadro number
 	coulomb-constant				=> 'N.m^2/C^2',
-	fine-structure-constant			=> '',		 #dimensionless
+	fine-structure-constant			=> '①',		#dimensionless
 	elementary-charge				=> 'C',
 	vacuum-permittivity				=> 'F/m',
-	#magnetic-permeability			=> 'H/m',    #dupe of vacuum-permeability! ##PULLME
+	#magnetic-permeability			=> 'H/m',    	#dupe of vacuum-permeability! ##PULLME
 	boltzmann-constant				=> 'J/K',
 	electron-volt					=> 'J',
 	vacuum-permeability				=> 'H/m',
 );
 my %constants-to-value;
-for %definitions-by-name.keys -> $n {
+for %defns-by-name.keys -> $n {
 	%constants-to-value{$n} = Math::Constants::EXPORT::DEFAULT::{$n};
 }
 
-my %abbreviations-to-name = (
+my %symbols-to-name = (
 	c  => 'speed-of-light-vacuum',
 	eV => 'electron-volt',
 	F  => 'faraday-constant',
@@ -81,22 +81,22 @@ my %abbreviations-to-name = (
 	ε0 => 'vacuum-permittivity',
 	μ0 => 'vacuum-permeability',
 );
-my %abbreviations-by-name = %abbreviations-to-name.kv.reverse;
+my %symbols-by-name = %symbols-to-name.kv.reverse;
 
 class Constant is export {
 	has $.name;
 	has $.value;
-	has $.definition;
-	has $.abbreviation;
+	has $.defn;
+	has $.symbol;
 }
 
 our %constants-by-name;
-for %definitions-by-name.keys -> $n {
+for %defns-by-name.keys -> $n {
 	%constants-by-name{$n} = Constant.new( 
-		name         => $n, 
-		value		 => %constants-to-value{$n},
-		definition   => %definitions-by-name{$n},
-		abbreviation => %abbreviations-by-name{$n},
+		name    => $n,
+		value	=> %constants-to-value{$n},
+		defn    => %defns-by-name{$n},
+		symbol  => %symbols-by-name{$n},
 	)
 }
 ##dd %constants-by-name;

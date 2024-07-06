@@ -37,7 +37,7 @@ https://github.com/JJ/p6-math-constants
 #say '----------------';
 #say @physics-constants-names.sort;
 #say '----------------';
-#say @physics-constants-abbreviations.sort;
+#say @physics-constants-symbols.sort;
 ```
 
 Copyright (c) Henley Cloud Consulting Ltd. 2021-2023

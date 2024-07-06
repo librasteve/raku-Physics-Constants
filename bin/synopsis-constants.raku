@@ -25,5 +25,5 @@ say ~ℏ;                         #1.054571817e-34 J.s
 say '----------------';
 say @physics-constants.sort.join("\n");
 say '----------------';
-say @physics-constants-abbreviations.sort.join("\n");
+say @physics-constants-symbols.sort.join("\n");
 
