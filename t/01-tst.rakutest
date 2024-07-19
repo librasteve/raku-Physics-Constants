@@ -1,7 +1,7 @@
 #!/usr/bin/env raku
 #t/13-nrm.t 
 #TESTALL$ prove6 ./t      [from root]
-use lib '../lib';
+
 use Test;
 plan 10;
 
@@ -13,10 +13,10 @@ $Physics::Measure::round-val = 0.01;
 my \λ = 2.5nm; 
 is ~λ, '2.5nm',									'~λ';
 
-my \ν = c / λ;  
+my \ν = c/λ;
 is ~ν.norm, '119.92PHz',						'~ν.norm';
 
-my \Ep = ℎ * ν;  
+my \Ep = ℎ*ν;
 is ~Ep.norm, '79.46aJ',						    '~Ep.norm';
 
 is-approx +kg-amu,                  6.02214076e+26,             '≈kg-amu';

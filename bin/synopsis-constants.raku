@@ -1,13 +1,12 @@
-#!/usr/bin/env raku 
-use lib '../lib';
+#!/usr/bin/env raku
 use Physics::Constants;  #<== must use before Physics::Measure 
 use Physics::Measure :ALL;
 
 $Physics::Measure::round-val = 0.01;
 
 my \λ = 2.5nm; 
-my \ν = c / λ; 
-my \Ep = ℎ * ν; 
+my \ν = c/λ;
+my \Ep = ℎ*ν;
 
 say "Wavelength of photon (λ) is " ~λ;				#2.5nm
 say "Frequency of photon (ν) is " ~ν.norm;			#119.92PHz
