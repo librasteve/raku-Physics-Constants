@@ -1,4 +1,4 @@
-unit module Physics::Constants:ver<1.0.4>:auth<Steve Roe (librasteve@furnival.net)>;
+unit module Physics::Constants:ver<1.0.5>:auth<Steve Roe (librasteve@furnival.net)>;
 #this module transforms unit class Math::Constants:ver<0.1.1>:auth<github:JJ>;
 use Physics::MathConstantsWrapper;
 use Physics::Measure;
@@ -17,14 +17,14 @@ our @physics-constants-symbols is export;
 
 my package EXPORT::DEFAULT {
 	for %constants-by-name.kv -> $name, $const {
-		@physics-constants.push( "$name => {$const.value} {$const.defn}" );
+		@physics-constants.push( $name => "{$const.value} {$const.defn}" );
 		@physics-constants-names.push( "$name" );
 
 		OUR::{'&' ~ $name} := sub { Measure.new("{$const.value} {$const.defn}") };
 
 
 		if $const.symbol {
-			@physics-constants-symbols.push("{ $const.symbol } => $name");
+			@physics-constants-symbols.push($const.symbol => $name);
 
 			OUR::{'&' ~ $const.symbol} := sub { Measure.new("{ $const.value } { $const.defn }") };
 		}
