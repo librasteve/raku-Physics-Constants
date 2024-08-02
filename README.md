@@ -26,9 +26,9 @@ say "Frequency of photon (ν) is " ~ν.in('petahertz');
 my \Ep = ℎ * ν;
 say "Energy of photon (Ep) is " ~Ep.in('attojoules');
 
-#Wavelength of photon (λ) is 2.5 nm
-#Frequency of photon (ν) is 119.9169832 petahertz
-#Energy of photon (Ep) is 79.45783266707788 attojoules
+Wavelength of photon (λ) is 2.5nm
+Frequency of photon (ν) is 119.92PHz
+Energy of photon (Ep) is 79.46aJ
 
 This module is a wrapper on JJ Merelo Math::Constants
 https://github.com/JJ/p6-math-constants
