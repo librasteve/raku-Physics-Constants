@@ -40,4 +40,4 @@ https://github.com/JJ/p6-math-constants
 #say @physics-constants-symbols.sort;
 ```
 
-Copyright (c) Henley Cloud Consulting Ltd. 2021-2024
+Copyright (c) Henley Cloud Consulting Ltd. 2021-2025
