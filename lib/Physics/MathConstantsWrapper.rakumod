@@ -1,4 +1,4 @@
-unit module Physics::MathConstantsWrapper:ver<1.0.5>:auth<Steve Roe (librasteve@furnival.net)>;
+unit module Physics::MathConstantsWrapper:ver<1.0.7>:auth<Steve Roe (librasteve@furnival.net)>;
 #this module wraps unit class Math::Constants:ver<0.1.1>:auth<github:JJ>;
 
 use Math::Constants;
@@ -44,8 +44,9 @@ my %defns-by-name = (
 	planck-mass						=> 'kg',
 	planck-time						=> 's',
 	planck-length					=> 'm',
-	planck-temperature				=> 'K',	
-	kg-amu							=> 'mol^-1',	#avogadro number
+	planck-temperature				=> 'K',
+	avogadro-number					=> 'mol',
+	kg-amu							=> 'mol^-1',
 	coulomb-constant				=> 'N.m^2/C^2',
 	fine-structure-constant			=> '①',		#dimensionless
 	elementary-charge				=> 'C',
@@ -60,7 +61,7 @@ for %defns-by-name.keys -> $n {
 	%constants-to-value{$n} = Math::Constants::EXPORT::DEFAULT::{$n};
 }
 
-my %symbols-to-name = (
+my %symbols-to-name = (   #where available
 	c  => 'speed-of-light-vacuum',
 	eV => 'electron-volt',
 	F  => 'faraday-constant',
@@ -70,7 +71,7 @@ my %symbols-to-name = (
 	ℏ  => 'plancks-reduced-h',
     k  => 'boltzmann-constant',
 	K0 => 'coulomb-constant',
-	Na => 'kg-amu',		#avogadro number
+	Na => 'avogadro-number',
 	lp => 'planck-length',
 	mp => 'planck-mass',
     R  => 'gas-constant',
@@ -83,7 +84,7 @@ my %symbols-to-name = (
 );
 my %symbols-by-name = %symbols-to-name.kv.reverse;
 
-class Constant is export {
+class Constant {
 	has $.name;
 	has $.value;
 	has $.defn;
@@ -99,6 +100,6 @@ for %defns-by-name.keys -> $n {
 		symbol  => %symbols-by-name{$n},
 	)
 }
-##dd %constants-by-name;
+#dd %constants-by-name;
 
 #EOF

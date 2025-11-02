@@ -1,6 +1,6 @@
 #!/usr/bin/env raku
-#t/13-nrm.t 
-#TESTALL$ prove6 ./t      [from root]
+#t/01-tst.rakutest
+#> prove6 -I. t/*     [from root]
 
 use Test;
 plan 10;

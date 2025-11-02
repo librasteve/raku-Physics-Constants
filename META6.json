@@ -1,30 +1,27 @@
 {
-  "name": "Physics::Constants",
-  "description": "Some support for physical constants.",
-  "version": "1.0.5",
-  "perl": "6.d",
-  "authors": [
-    "librasteve"
-  ],
-  "auth": "zef:librasteve",
-  "depends": [
-    "Math::Constants",
-    "Physics::Measure"
-  ],
-  "build-depends": [],
-  "test-depends": [],
-  "provides": {
-    "Physics::Constants": "lib/Physics/Constants.rakumod",
-    "Physics::MathConstantsWrapper": "lib/Physics/MathConstantsWrapper.rakumod"
-  },
-  "resources": [],
-  "license": "Artistic-2.0",
-  "tags": [
-    "Physics",
-    "Measure",
-    "Units",
-    "Constants"
-  ],
-  "api": "1",
-  "source-url": "git://github.com/librasteve/raku-Physics-Constants.git"
+    "name": "Physics::Constants",
+    "description": "Some support for physical constants.",
+    "version": "1.0.7",
+    "authors": [
+        "librasteve"
+    ],
+    "auth": "zef:librasteve",
+    "depends": [
+        "Math::Constants:ver<0.2.2>:auth<zef:jjmerelo>",
+        "Physics::Measure"
+    ],
+    "build-depends": [],
+    "provides": {
+        "Physics::Constants": "lib/Physics/Constants.rakumod",
+        "Physics::MathConstantsWrapper": "lib/Physics/MathConstantsWrapper.rakumod"
+    },
+    "license": "Artistic-2.0",
+    "tags": [
+        "Physics",
+        "Measure",
+        "Units",
+        "Constants"
+    ],
+    "api": "1",
+    "source-url": "git://github.com/librasteve/raku-Physics-Constants.git"
 }

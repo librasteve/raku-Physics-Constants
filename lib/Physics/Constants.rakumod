@@ -1,5 +1,5 @@
-unit module Physics::Constants:ver<1.0.5>:auth<Steve Roe (librasteve@furnival.net)>;
-#this module transforms unit class Math::Constants:ver<0.1.1>:auth<github:JJ>;
+unit module Physics::Constants:ver<1.0.7>:auth<Steve Roe (librasteve@furnival.net)>;
+
 use Physics::MathConstantsWrapper;
 use Physics::Measure;
 
