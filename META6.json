@@ -1,7 +1,7 @@
 {
     "name": "Physics::Constants",
     "description": "Some support for physical constants.",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "authors": [
         "librasteve"
     ],

@@ -1,4 +1,4 @@
-unit module Physics::Constants:ver<1.0.7>:auth<Steve Roe (librasteve@furnival.net)>;
+unit module Physics::Constants:ver<1.0.8>:auth<Steve Roe (librasteve@furnival.net)>;
 
 use Physics::MathConstantsWrapper;
 use Physics::Measure;
@@ -11,9 +11,9 @@ use Physics::Measure;
 
 my %constants-by-name := %Physics::MathConstantsWrapper::constants-by-name;
 
-our @physics-constants is export; 
-our @physics-constants-names is export; 
-our @physics-constants-symbols is export;
+our @physics-constants 			is export;
+our @physics-constants-names 	is export;
+our @physics-constants-symbols 	is export;
 
 my package EXPORT::DEFAULT {
 	for %constants-by-name.kv -> $name, $const {
@@ -26,7 +26,7 @@ my package EXPORT::DEFAULT {
 		if $const.symbol {
 			@physics-constants-symbols.push($const.symbol => $name);
 
-			OUR::{'&' ~ $const.symbol} := sub { Measure.new("{ $const.value } { $const.defn }") };
+			OUR::{'&term:<' ~ $const.symbol ~ '>'} := sub { Measure.new("{ $const.value } { $const.defn }") };
 		}
 
 	}
