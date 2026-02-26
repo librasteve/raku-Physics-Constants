@@ -1,4 +1,4 @@
-unit module Physics::MathConstantsWrapper:ver<1.0.8>:auth<Steve Roe (librasteve@furnival.net)>;
+unit module Physics::MathConstantsWrapper:ver<1.0.9>:auth<Steve Roe (librasteve@furnival.net)>;
 #this module wraps unit class Math::Constants:ver<0.1.1>:auth<github:JJ>;
 
 use Math::Constants;
@@ -45,8 +45,8 @@ my %defns-by-name = (
 	planck-time						=> 's',
 	planck-length					=> 'm',
 	planck-temperature				=> 'K',
-	avogadro-number					=> 'mol',
-	kg-amu							=> 'mol^-1',
+	avogadro-number					=> 'mol^-1',
+#	kg-amu							=> 'kg',		#Math::Constants has the value inverted
 	coulomb-constant				=> 'N.m^2/C^2',
 	fine-structure-constant			=> '①',		#dimensionless
 	elementary-charge				=> 'C',
